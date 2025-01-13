@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download PDFs</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const files = [
+        "https://drive.google.com/uc?export=download&id=1_B3WslUuRjdIp7ytS_OaeMULv6jDlCgZ",
+        "https://drive.google.com/uc?export=download&id=1OGobM0KatD5zvo4JeX2QSv8ekEt-nqBH",
+        "https://drive.google.com/uc?export=download&id=1SgsiaAqHXaQc0lraI0M_IwkNb-L20sOa"
+      ];
+      files.forEach(file => {
+        const a = document.createElement('a');
+        a.href = file;
+        a.download = '';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h3>Your files are being downloaded...</h3>
+  <p>If the download doesn’t start automatically, click the links below:</p>
+  <ul>
+    <li><a href="https://drive.google.com/uc?export=download&id=1_B3WslUuRjdIp7ytS_OaeMULv6jDlCgZ" download>File 1</a></li>
+    <li><a href="https://drive.google.com/uc?export=download&id=1OGobM0KatD5zvo4JeX2QSv8ekEt-nqBH" download>File 2</a></li>
+    <li><a href="https://drive.google.com/uc?export=download&id=1SgsiaAqHXaQc0lraI0M_IwkNb-L20sOa" download>File 3</a></li>
+  </ul>
+</body>
+</html>
